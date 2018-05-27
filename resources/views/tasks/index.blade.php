@@ -3,12 +3,12 @@
     <h2>Tasks</h2>
 
 
-     <a href="/tasks/create"  class="btn btn-primary">Create New Task</a><br><br>
+     <a href="/tasks/new"  class="btn btn-primary">Create New Task</a><br><br>
      <ul>
     @foreach ($tasks as $task) 
     
     <li>
-    {{$post->id}} 
+    {{$task->name}} 
     </li>
     @endforeach 
     </ul>

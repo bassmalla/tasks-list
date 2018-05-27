@@ -13,4 +13,16 @@ class TasksController extends Controller
             'tasks' => $tasks
         ]);
     }
+
+    public function create(){
+        return view('tasks.create');
+    }
+
+    public function store(Request $request){
+        Task::create([
+            'name' => $request->name,
+        ]);
+        
+       return redirect(route('tasks.index')); 
+    }
 }
